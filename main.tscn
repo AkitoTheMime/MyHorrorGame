@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://b3scmm5r6a23q"]
+
+[ext_resource type="Script" uid="uid://c7ljy5cp4slux" path="res://camera.gd" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://byvm46paak5qs" path="res://gettyimages-1199131753-640x640.jpg" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://q86yp6vrkxal" path="res://FabricMaterialPack/Textures/Fabric_roughPattern_01/Fabric_roughPattern_01_basecolor.jpg" id="3_h2yge"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5wqob"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5wqob"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
+albedo_texture = ExtResource("3_h2yge")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6ebfx"]
+
+[node name="Main" type="Node3D" unique_id=1769507112]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=471924594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1925992375]
+shape = SubResource("CapsuleShape3D_5wqob")
+debug_color = Color(1, 0.46564656, 0.23564312, 0.41960785)
+
+[node name="Camera3D" type="Camera3D" parent="RigidBody3D" unique_id=1770342887]
+script = ExtResource("1_ig7tw")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1010088142]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2.536)
+texture = ExtResource("2_0xm2m")
+
+[node name="Map" type="Node3D" parent="." unique_id=2036968204]
+
+[node name="Floor" type="StaticBody3D" parent="Map" unique_id=1367948960]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Floor" unique_id=1965599298]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0)
+mesh = SubResource("PlaneMesh_5wqob")
+surface_material_override/0 = SubResource("StandardMaterial3D_h2yge")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Floor" unique_id=1926532831]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0)
+shape = SubResource("BoxShape3D_6ebfx")
