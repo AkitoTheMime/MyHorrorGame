@@ -1,5 +1,8 @@
-res://main.tscn
-res://player.gd
-res://camera.gd
-res://menu.tscn
-res://menu.gd
+res://scenes/main.tscn
+res://scenes/menu.tscn
+res://scenes/player.tscn
+res://scripts/menu.gd
+res://scenes/map.tscn
+res://scripts/camera.gd
+res://scripts/player.gd
+res://scenes/settings_screen.tscn

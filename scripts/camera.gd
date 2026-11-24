@@ -10,8 +10,7 @@ var yaw: float = 0.0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	flashlight.visible = false
-	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
-	get_viewport().warp_mouse(get_viewport().get_visible_rect().size / 2)
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	pitch = 0.0
 	yaw = 0.0
 	rotation = Vector3.ZERO
@@ -33,17 +32,15 @@ func _process(delta: float) -> void:
 		Vector3.UP
 	)
 
-func _input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
-		var center = get_viewport().get_visible_rect().size / 2.0
-
-		var mouse_pos = get_viewport().get_mouse_position()
-		var offset = mouse_pos - center
-
-		yaw = -offset.x * sensitivity
-		pitch = -offset.y * sensitivity
+		yaw -= event.relative.x * sensitivity
+		pitch -= event.relative.y * sensitivity
 
 		pitch = clamp(pitch, deg_to_rad(-5.0), deg_to_rad(5.0))
 		yaw = clamp(yaw, deg_to_rad(-5.0), deg_to_rad(5.0))
 
 		rotation = Vector3(pitch, yaw, 0.0)
+		
+	if event.is_action_pressed("flashlight"):
+		flashlight.visible = !flashlight.visible
