@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dxmho8asgk1f6"]
+
+[ext_resource type="Script" uid="uid://hwr5o2fpqn2v" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://c7ljy5cp4slux" path="res://camera.gd" id="2_i3pqv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1bvp3"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1701490950]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+script = ExtResource("1_onrkg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1315049018]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_1bvp3")
+debug_color = Color(1, 0.46564656, 0.23564312, 0.41960785)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1515596738]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+script = ExtResource("2_i3pqv")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D" unique_id=406375832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3549195)
+light_energy = 20.0
+shadow_enabled = true
+spot_range = 20.0
+spot_angle = 15.0

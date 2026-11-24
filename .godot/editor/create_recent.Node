@@ -1,6 +1,12 @@
-CollisionShape3D
+Button
+VBoxContainer
+Control
 MeshInstance3D
 StaticBody3D
+CollisionShape3D
+WorldEnvironment
+SpotLight3D
+CharacterBody3D
 RigidBody3D
 Node3D
 Sprite3D
