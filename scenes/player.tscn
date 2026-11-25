@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://hwr5o2fpqn2v" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Script" uid="uid://c7ljy5cp4slux" path="res://scripts/camera.gd" id="2_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://xdot80f1h2n4" path="res://sounds/Steps/Floor/Steps_floor-015.ogg" id="3_dqkch"]
+[ext_resource type="AudioStream" uid="uid://cytofrro2bn2a" path="res://sounds/flashlight_sound.mp3" id="3_qlg0r"]
+[ext_resource type="Script" uid="uid://dd5ljwy62jn3e" path="res://scenes/footsteps.gd" id="4_qlg0r"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1bvp3"]
 
@@ -18,9 +21,23 @@ debug_color = Color(1, 0.46564656, 0.23564312, 0.41960785)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 script = ExtResource("2_qhqgy")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D" unique_id=406375832]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3549195)
-light_energy = 20.0
+[node name="Flashlight" type="SpotLight3D" parent="Camera3D" unique_id=406375832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.042354226)
 shadow_enabled = true
 spot_range = 20.0
 spot_angle = 15.0
+
+[node name="FlashlightSound" type="AudioStreamPlayer3D" parent="Camera3D/Flashlight" unique_id=2116532317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -1.223)
+stream = ExtResource("3_qlg0r")
+volume_db = -10.0
+max_db = -5.0
+
+[node name="Footsteps" type="AudioStreamPlayer3D" parent="." unique_id=1463647451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+stream = ExtResource("3_dqkch")
+script = ExtResource("4_qlg0r")
+
+[node name="Timer" type="Timer" parent="." unique_id=191872196]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

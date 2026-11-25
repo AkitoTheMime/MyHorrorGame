@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://82pb4ulaqq58" path="res://scripts/menu.gd" id="1_yqeox"]
 [ext_resource type="Texture2D" uid="uid://co38cntqn6g67" path="res://menu_background.jpg" id="2_vjb58"]
+[ext_resource type="AudioStream" uid="uid://d2cqjpjesx3s" path="res://sounds/main_menu.wav" id="3_con2f"]
 
 [node name="Menu" type="Node2D" unique_id=1442812853]
 script = ExtResource("1_yqeox")
@@ -53,5 +54,9 @@ text = "Start"
 z_index = -1
 position = Vector2(964, 547)
 texture = ExtResource("2_vjb58")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1594581472]
+stream = ExtResource("3_con2f")
+autoplay = true
 
 [connection signal="pressed" from="Control/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]

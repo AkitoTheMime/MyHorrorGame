@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cia3bok73pn8w"]
+
+[ext_resource type="Texture2D" uid="uid://ckobg7deb0cxt" path="res://textures/Torment/True Colour/str_stoneflr5.png" id="1_ij88p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mfk24"]
+albedo_texture = ExtResource("1_ij88p")
+uv1_scale = Vector3(50, 50, 50)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_02flm"]
+material = SubResource("StandardMaterial3D_mfk24")
+size = Vector2(100, 200)
+
+[node name="Floor" type="StaticBody3D" unique_id=1804409525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -41.818016)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=818118455]
+mesh = SubResource("PlaneMesh_02flm")
