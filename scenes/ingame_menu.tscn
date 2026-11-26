@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://rhr4xjatnei3"]
 
+[ext_resource type="Script" uid="uid://d4g178vnsmtb2" path="res://scripts/ingame_menu.gd" id="1_yvrjh"]
+
 [node name="IngameMenu" type="Control" unique_id=1341076234]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_yvrjh")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1612182714]
 layout_mode = 1
@@ -22,16 +25,19 @@ offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=1183109072]
+[node name="Continue" type="Button" parent="VBoxContainer" unique_id=1183109072]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 48
 text = "Continue"
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1477676171]
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1477676171]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 48
 text = "Leave Game"
+
+[connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

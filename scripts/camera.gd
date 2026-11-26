@@ -3,6 +3,7 @@ extends Camera3D
 @export var sensitivity: float = 0.0005
 @onready var flashlight: SpotLight3D = $Flashlight
 @onready var flashlight_sound: AudioStreamPlayer3D = $Flashlight/FlashlightSound
+@onready var player: CharacterBody3D = $".."
 
 var pitch: float = 0.0
 var yaw: float = 0.0
@@ -53,13 +54,6 @@ func _process(delta: float) -> void:
 		Vector3.UP
 	)
 
-	if Input.is_key_pressed(KEY_Q):
-		print("Looking Behind Left")
-
-	if Input.is_key_pressed(KEY_E):
-		print("Looking Behind Right")
-
-
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		yaw -= event.relative.x * sensitivity
@@ -77,7 +71,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _update_camera_bob(delta: float) -> void:
-	var is_moving = Input.is_key_pressed(KEY_W)
+	var is_moving = player.velocity.z < 0.0
 
 	var target_position: Vector3
 	var target_rotation_z: float

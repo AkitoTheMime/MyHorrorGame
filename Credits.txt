@@ -1,3 +1,5 @@
+Gameplay based/referenced on 123 Slaughter Me Street by Impulse Game Studios, LLC
+
 Textures used:
 	"Torment Textures" by Bradley D. (https://strideh.itch.io/torment)
 

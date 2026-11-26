@@ -1,23 +1,27 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1795621919
-Credits.txt::TextFile::-1::1795615849::0::1::::<><><>0<>0<><>::
+::res://::1795716388
+Credits.txt::TextFile::-1::1795714444::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::921221585593911398::1795515698::1795515698::1::::<><><>0<>0<>0aa7127b07ca24b7253cb64019007254<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-menu_background.jpg::CompressedTexture2D::5815295700681833694::1795611514::1795611514::1::::<><><>0<>0<>7e84f81d6697bfcbacdc2fdd4a07ef78<>res://.godot/imported/menu_background.jpg-a62be6a16d36b88840b8af5ba5754840.ctex::
-::res://scenes/::1795621774
+menu_background.jpg::CompressedTexture2D::5815295700681833694::1795611514::1795711201::1::::<><><>0<>0<>8f3d2e2f0bbc5bd8326b40e03ab70532<>res://.godot/imported/menu_background.jpg-a62be6a16d36b88840b8af5ba5754840.s3tc.ctex::
+::res://scenes/::1795716388
 exit_1.tscn::PackedScene::4790248001032304136::1795620646::0::1::::<><><>0<>0<><>::uid://d13ah5x6ex1k3::::res://textures/Torment/True Colour/str_stonebrk3.png
 floor1.tscn::PackedScene::5336054730348729956::1795618128::0::1::::<><><>0<>0<><>::uid://ckobg7deb0cxt::::res://textures/Torment/True Colour/str_stoneflr5.png
-footsteps.gd::GDScript::7432445067714726856::1795616144::0::1::::<>AudioStreamPlayer3D<><>0<>0<><>::
-ingame_menu.tscn::PackedScene::1208746184991440148::1795618017::0::1::::<><><>0<>0<><>::
-level1.tscn::PackedScene::4389010646081670468::1795621774::0::1::::<><><>0<>0<><>::uid://dxmho8asgk1f6::::res://scenes/player.tscn<>uid://caioxjr7v6881::::res://scenes/exit_1.tscn<>uid://cia3bok73pn8w::::res://scenes/floor1.tscn<>uid://4lx0mk8vu84b::::res://scenes/wall_1.tscn
+ingame_menu.tscn::PackedScene::1208746184991440148::1795716391::0::1::::<><><>0<>0<><>::uid://d4g178vnsmtb2::::res://scenes/ingame_menu.gd
+level1.tscn::PackedScene::4389010646081670468::1795714980::0::1::::<><><>0<>0<><>::uid://dxmho8asgk1f6::::res://scenes/player.tscn<>uid://caioxjr7v6881::::res://scenes/exit_1.tscn<>uid://cia3bok73pn8w::::res://scenes/floor1.tscn<>uid://4lx0mk8vu84b::::res://scenes/wall_1.tscn<>uid://owvvsotr72pf::::res://scenes/side_ally.tscn
 menu.tscn::PackedScene::7528989950648576019::1795615589::0::1::::<><><>0<>0<><>::uid://82pb4ulaqq58::::res://scripts/menu.gd<>uid://co38cntqn6g67::::res://menu_background.jpg<>uid://d2cqjpjesx3s::::res://sounds/main_menu.wav
-player.tscn::PackedScene::8798829741963632801::1795620735::0::1::::<><><>0<>0<><>::uid://hwr5o2fpqn2v::::res://scripts/player.gd<>uid://c7ljy5cp4slux::::res://scripts/camera.gd<>uid://xdot80f1h2n4::::res://sounds/Steps/Floor/Steps_floor-015.ogg<>uid://cytofrro2bn2a::::res://sounds/flashlight_sound.mp3<>uid://dd5ljwy62jn3e::::res://scenes/footsteps.gd
+player.tscn::PackedScene::8798829741963632801::1795715959::0::1::::<><><>0<>0<><>::uid://hwr5o2fpqn2v::::res://scripts/player.gd<>uid://c7ljy5cp4slux::::res://scripts/camera.gd<>uid://xdot80f1h2n4::::res://sounds/Steps/Floor/Steps_floor-015.ogg<>uid://cytofrro2bn2a::::res://sounds/flashlight_sound.mp3<>uid://dd5ljwy62jn3e::::res://scripts/footsteps.gd<>uid://rhr4xjatnei3::::res://scenes/ingame_menu.tscn
 settings_screen.tscn::PackedScene::4834080457893156571::1795611784::0::1::::<><><>0<>0<><>::
-side_ally.tscn::PackedScene::1029373647976711647::1795612379::0::1::::<><><>0<>0<><>::
-wall_1.tscn::PackedScene::2059626403735350895::1795620414::0::1::::<><><>0<>0<><>::uid://d13ah5x6ex1k3::::res://textures/Torment/True Colour/str_stonebrk3.png
-::res://scripts/::1795620535
-camera.gd::GDScript::7042183410597630763::1795619295::0::1::::<>Camera3D<><>0<>0<><>::
+side_ally.tscn::PackedScene::1029373647976711647::1795710907::0::1::::<><><>0<>0<><>::uid://ble5g5rrg54v0::::res://scenes/trigger_side_ally.tscn
+trigger_side_ally.tscn::PackedScene::3168589302017932679::1795716388::0::1::::<><><>0<>0<><>::uid://bgh3uylonfksc::::res://scripts/trigger_side_ally.gd
+wall_1.tscn::PackedScene::2059626403735350895::1795710978::0::1::::<><><>0<>0<><>::uid://d13ah5x6ex1k3::::res://textures/Torment/True Colour/str_stonebrk3.png
+::res://scripts/::1795716388
+camera.gd::GDScript::7042183410597630763::1795712612::0::1::::<>Camera3D<><>0<>0<><>::
+footsteps.gd::GDScript::7432445067714726856::1795616144::0::1::::<>AudioStreamPlayer3D<><>0<>0<><>::
 menu.gd::GDScript::2372884134673765053::1795618125::0::1::::<>Node2D<><>0<>0<><>::
-player.gd::GDScript::537824756034206767::1795620535::0::1::::<>CharacterBody3D<><>0<>0<><>::
+player.gd::GDScript::537824756034206767::1795715920::0::1::::<>CharacterBody3D<><>0<>0<><>::
+ingame_menu.gd::GDScript::9208762336650141417::1795716052::0::1::::<>Control<><>0<>0<><>::
+side_ally_trigger.gd::GDScript::7476502690287065193::1795710016::0::1::::<>Area3D<><>0<>0<><>::
+trigger_side_ally.gd::GDScript::2823741459682201734::1795710220::0::1::::<>Node3D<><>0<>0<><>::
 ::res://sounds/::1795618210
 flashlight_sound.mp3::AudioStreamMP3::6497456678725229826::1795617723::1795618210::1::::<><><>0<>0<>9cef8258bdbf7f67c00c96237c1f3c1f<>res://.godot/imported/flashlight_sound.mp3-2bb3ee32e7d846dad7bf3f88c1e204b8.mp3str::
 main_menu.wav::AudioStreamWAV::266455233258939094::1795614905::1795615216::1::::<><><>0<>0<>1f9161058b8f984c3f10fbd9c573e44a<>res://.godot/imported/main_menu.wav-03551c6babc2cf9d83e21c95b7495974.sample::
@@ -199,7 +203,7 @@ Steps_wood-018.ogg::AudioStreamOggVorbis::3330325849287793087::1795615969::17956
 Steps_wood-019.ogg::AudioStreamOggVorbis::4339401993782351959::1795615969::1795615987::1::::<><><>0<>0<>477c8344f6ab7deb3b7f5bcce2e8c8cf<>res://.godot/imported/Steps_wood-019.ogg-a8949af7d09e34ed9a3cf563b6fb53cc.oggvorbisstr::
 Steps_wood-020.ogg::AudioStreamOggVorbis::2253831827195014312::1795615969::1795615987::1::::<><><>0<>0<>0da16a2b5135525100446099f14419f7<>res://.godot/imported/Steps_wood-020.ogg-835ee6c16d824e0a2f8a7d7397af24a7.oggvorbisstr::
 Steps_wood-021.ogg::AudioStreamOggVorbis::1768834531754731423::1795615969::1795615987::1::::<><><>0<>0<>e80b62163dbe3b54d570a94fa544d3cd<>res://.godot/imported/Steps_wood-021.ogg-df7e6a45a2889435ee19016717ba2a8b.oggvorbisstr::
-::res://textures/::1795621919
+::res://textures/::1795621934
 star_map_texture_1k.jpg::CompressedTexture2D::867369349000879911::1795621905::1795621934::1::::<><><>0<>0<>3e0efcf7d52b771282710f007f206a6a<>res://.godot/imported/star_map_texture_1k.jpg-df71f9583389dfc58b0b7c4ffed628b4.s3tc.ctex::
 ::res://textures/Torment/::1795621931
 Attribution and License.txt::TextFile::-1::1776195908::0::1::::<><><>0<>0<><>::

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ble5g5rrg54v0"]
+
+[ext_resource type="Script" uid="uid://bgh3uylonfksc" path="res://scripts/trigger_side_ally.gd" id="1_pmkcf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_02flm"]
+
+[node name="TriggerSideAlly" type="Node3D" unique_id=950649546]
+script = ExtResource("1_pmkcf")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1002962756]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1160852910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.41, 0, 0, 0)
+shape = SubResource("BoxShape3D_02flm")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

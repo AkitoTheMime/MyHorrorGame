@@ -1,3 +1,25 @@
 [gd_scene format=3 uid="uid://owvvsotr72pf"]
 
+[ext_resource type="PackedScene" uid="uid://ble5g5rrg54v0" path="res://scenes/trigger_side_ally.tscn" id="1_jtkqb"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_skglt"]
+
 [node name="SideAlly" type="Node3D" unique_id=536207256]
+
+[node name="TriggerSideAlly" parent="." unique_id=950649546 instance=ExtResource("1_jtkqb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 3)
+visible = false
+
+[node name="Node3D" type="Node3D" parent="." unique_id=2127637837]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D" unique_id=1790095918]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 0.1, 0, 10, -1)
+mesh = SubResource("BoxMesh_skglt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D" unique_id=1962634495]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 0.1, 0, 10, 1)
+mesh = SubResource("BoxMesh_skglt")
+
+[node name="TriggerSideAlly2" parent="." unique_id=1765816776 instance=ExtResource("1_jtkqb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 3)
+visible = false

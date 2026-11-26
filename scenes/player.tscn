@@ -4,7 +4,8 @@
 [ext_resource type="Script" uid="uid://c7ljy5cp4slux" path="res://scripts/camera.gd" id="2_qhqgy"]
 [ext_resource type="AudioStream" uid="uid://xdot80f1h2n4" path="res://sounds/Steps/Floor/Steps_floor-015.ogg" id="3_dqkch"]
 [ext_resource type="AudioStream" uid="uid://cytofrro2bn2a" path="res://sounds/flashlight_sound.mp3" id="3_qlg0r"]
-[ext_resource type="Script" uid="uid://dd5ljwy62jn3e" path="res://scenes/footsteps.gd" id="4_qlg0r"]
+[ext_resource type="Script" uid="uid://dd5ljwy62jn3e" path="res://scripts/footsteps.gd" id="4_qlg0r"]
+[ext_resource type="PackedScene" uid="uid://rhr4xjatnei3" path="res://scenes/ingame_menu.tscn" id="6_tuyoq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1bvp3"]
 
@@ -39,5 +40,9 @@ stream = ExtResource("3_dqkch")
 script = ExtResource("4_qlg0r")
 
 [node name="Timer" type="Timer" parent="." unique_id=191872196]
+
+[node name="IngameMenu" parent="." unique_id=1341076234 instance=ExtResource("6_tuyoq")]
+process_mode = 2
+visible = false
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
